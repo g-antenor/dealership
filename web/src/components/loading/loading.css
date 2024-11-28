@@ -1,0 +1,68 @@
+/* Arquivo: Loading.css */
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100vh; 
+    height: auto;
+    aspect-ratio: 16 / 9;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .loading-spinner {
+    position: relative;
+    width: 80px;
+    height: 50px;
+    margin-bottom: 15px;
+  }
+  
+  .car-body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation: drive 1.5s linear infinite;
+  }
+  
+  .car-top {
+    position: absolute;
+    top: 0;
+    width: 60px;
+    height: 20px;
+    background-color: #272727;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .car-bottom {
+    position: absolute;
+    bottom: 5px;
+    width: 80px;
+    height: 20px;
+    background-color: #272727;
+    border-radius: 5px;
+  }
+  
+  .wheel {
+    position: absolute;
+    bottom: 0;
+    width: 16px;
+    height: 16px;
+    background-color: #272727;
+    border-radius: 50%;
+    border: 2px solid #d9d9d9;
+  }
+  
+  .wheel-front {
+    left: 10px;
+  }
+  
+  .wheel-back {
+    right: 10px;
+  }
+  
