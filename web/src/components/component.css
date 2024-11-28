@@ -16,7 +16,7 @@
   }
   
   .nav-container::-webkit-scrollbar-thumb {
-    background-color: rgb(192, 233, 121); /* Cor da barra */
+    background-color: #272727; /* Cor da barra */
     border-radius: 10px;
   }
   
@@ -141,7 +141,7 @@
     flex: 1;
     padding: 10px 15px;
     font-size: 14px;
-    color: #fff;
+    color: #272727;
     background-color: #007bff; /* Azul principal */
     border: none;
     border-radius: 5px;
@@ -150,11 +150,19 @@
   }
   
   .card-selling-buttons .btn-buy {
-    background-color: #28a745; /* Verde para compra */
+    background-color: #C0E979; /* Verde para compra */
   }
   
   .card-selling-buttons .btn-buy:hover {
-    background-color: #218838;
+    background-color: rgba(192, 233, 121, 0.75);
+  }
+
+  .card-selling-buttons .btn-util {
+    background-color: #d2d2d2; /* Verde para compra */
+  }
+  
+  .card-selling-buttons .btn-util:hover {
+    background-color: #d9d9d9;
   }
   
   .card-selling-buttons .btn-driver {

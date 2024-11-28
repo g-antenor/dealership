@@ -54,7 +54,8 @@ local function EndMission()
     utils.Notify("Missão finalizada! Pagamento recebido.", "success", 5000)
 end
 
-function StartMission(dealership, payment, args)
+function StartMission(args)
+    local dealership = getDealershipId()
     if inMission then
         utils.Notify("Você já está em uma missão!", "error", 5000)
         return
@@ -77,7 +78,7 @@ function StartMission(dealership, payment, args)
 
     missionData.trailer = utils.SpawnVehicle(GetHashKey(Config.Dealerships[dealership].Mission.TrailerModel), trailerCoords)
 
-    missionData.paymentImport = missionData.paymentImport + payment
+    missionData.paymentImport = missionData.paymentImport + args.price
     table.insert(missionData.vheicles, { vheicle = args.vheicle, category = args.category, value = args.value, amount = args.amount })
 
     inMission = true

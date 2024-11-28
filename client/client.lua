@@ -31,12 +31,7 @@ CreateThread(function()
                         label = "Painel de Admin",
                         job = coords.SetJob,
                         action = function()
-                            local PlayerData = QBCore.Functions.GetPlayerData()
-                            if coords.SetJob == PlayerData.job.name then
-                                print('Acesso ao Painel de Admin')
-                            else
-                                QBCore.Functions.Notify("Você não tem permissão para acessar este painel.", "error")
-                            end
+                            TriggerEvent('nui:open', 'admin', id)
                         end,
                     },
                     {
@@ -69,7 +64,6 @@ CreateThread(function()
                         icon = "fas fa-laptop",
                         label = "Catálogo de Vendas",
                         action = function ()
-                            print(id)
                             TriggerEvent('nui:open', 'catalog', id)
                         end
                     },

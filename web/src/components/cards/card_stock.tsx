@@ -3,7 +3,8 @@ import { faGauge, faUsers, faBox } from '@fortawesome/free-solid-svg-icons';
 import CarProp from '../../types/cards'
 import '../component.css'
 
-const card_selling = ({dealerId, name, model, mark, price}: CarProp) => {
+const card_edit = ({name, model, mark, price}: CarProp) => {
+
   return (
     <div className='card-selling'>
         <img className='card-car-image' src={`https://docs.fivem.net/vehicles/${model}.webp`} alt={model} />
@@ -22,11 +23,13 @@ const card_selling = ({dealerId, name, model, mark, price}: CarProp) => {
             </ul>
         </div>
         <div className='card-selling-buttons'>
-            <button className='btn-buy'>Comprar</button>
-            {!dealerId && ( <button className='btn-driver'>Teste Driver</button> )}
+            <button className='btn-util'>+</button>
+            <button className='btn-util'>Edit</button>
+            <button className='btn-buy'>Selling</button>
+            <button className='btn-driver'>Teste Driver</button>
         </div>
     </div>
   )
 }
 
-export default card_selling
+export default card_edit
